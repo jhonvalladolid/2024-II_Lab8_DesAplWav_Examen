@@ -1,13 +1,12 @@
 <h1 class="mb-4 text-center">Lista de Estados</h1>
 
-<!-- Tabla de Estados con estilo Bootstrap -->
 <div class="table-responsive">
-  <table class="table table-hover table-bordered text-center">
+  <table class="table table-striped table-hover table-bordered">
     <thead class="thead-light">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Descripción del Estado</th>
-        <th scope="col">Acciones</th>
+        <th>#</th>
+        <th>Descripción del Estado</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +16,8 @@
         <td>{{this.descripcion}}</td>
         <td>
           <a href="/estados/{{this.id}}" class="btn btn-sm btn-warning">Editar</a>
-          <form action="/estados/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
+          <form action="/estados/{{this.id}}?_method=DELETE" method="POST" class="d-inline"
+            onsubmit="event.preventDefault(); confirmDelete({{this.id}}, 'estados');">
             <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
           </form>
         </td>
@@ -27,7 +27,6 @@
   </table>
 </div>
 
-<!-- Botón para crear nuevo estado -->
 <div class="text-right">
   <a href="/estados/nuevo" class="btn btn-success">Crear nuevo Estado</a>
 </div>

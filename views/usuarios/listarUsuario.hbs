@@ -1,4 +1,4 @@
-<h1 class="mb-4">Lista de Usuarios</h1>
+<h1 class="mb-4 text-center">Lista de Usuarios</h1>
 
 <div class="table-responsive">
   <table class="table table-striped table-hover table-bordered">
@@ -19,14 +19,15 @@
         <td>{{this.rol.descripcion}}</td>
         <td>
           {{#if (eq this.estado.descripcion "Activo")}}
-            <span class="badge badge-success">{{this.estado.descripcion}}</span>
+          <span class="badge badge-success">{{this.estado.descripcion}}</span>
           {{else}}
-            <span class="badge badge-danger">{{this.estado.descripcion}}</span>
+          <span class="badge badge-danger">{{this.estado.descripcion}}</span>
           {{/if}}
         </td>
         <td>
           <a href="/usuarios/{{this.id}}" class="btn btn-sm btn-warning">Editar</a>
-          <form action="/usuarios/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
+          <form action="/usuarios/{{this.id}}?_method=DELETE" method="POST" class="d-inline"
+            onsubmit="event.preventDefault(); confirmDelete({{this.id}}, 'usuarios');">
             <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
           </form>
         </td>

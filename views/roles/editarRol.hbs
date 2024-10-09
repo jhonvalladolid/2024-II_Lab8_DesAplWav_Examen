@@ -1,15 +1,19 @@
 <h1 class="mb-4 text-center">Editar Rol</h1>
 
 <form action="/roles/{{rol.id}}?_method=PUT" method="POST" class="needs-validation" novalidate>
-  <div class="form-group">
-    <label for="descripcion">Descripción:</label>
-    <input type="text" id="descripcion" name="descripcion" class="form-control" value="{{rol.descripcion}}" required>
-    <div class="invalid-feedback">
-      Por favor ingrese la descripción.
+  <div class="row">
+    <!-- Descripción del Rol -->
+    <div class="col-md-12 mb-3">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <input type="text" id="descripcion" name="descripcion" class="form-control" value="{{rol.descripcion}}" required>
+      <div class="invalid-feedback">
+        Por favor ingrese la descripción.
+      </div>
     </div>
   </div>
 
-<div class="text-right">
+  <!-- Botones -->
+  <div class="text-right">
     <a href="/roles" class="btn btn-secondary">Volver a la lista de roles</a>
     <button type="submit" class="btn btn-primary">Actualizar</button>
   </div>

@@ -1,4 +1,4 @@
-<h1 class="mb-4">Crear nuevo Usuario</h1>
+<h1 class="mb-4 text-center">Crear nuevo Usuario</h1>
 
 <form action="/usuarios" method="POST" class="needs-validation" novalidate>
   <div class="form-row">
@@ -51,7 +51,7 @@
       <select id="rol_id" name="rol_id" class="form-control" required>
         <option value="">Seleccione un Rol</option>
         {{#each roles}}
-          <option value="{{this.id}}">{{this.descripcion}}</option>
+        <option value="{{this.id}}">{{this.descripcion}}</option>
         {{/each}}
       </select>
       <div class="invalid-feedback">
@@ -64,7 +64,7 @@
       <select id="estado_id" name="estado_id" class="form-control" required>
         <option value="">Seleccione un Estado</option>
         {{#each estados}}
-          <option value="{{this.id}}">{{this.descripcion}}</option>
+        <option value="{{this.id}}">{{this.descripcion}}</option>
         {{/each}}
       </select>
       <div class="invalid-feedback">
@@ -73,8 +73,8 @@
     </div>
   </div>
 
-<div class="text-right">
-  <button type="submit" class="btn btn-primary">Crear</button>
-  <a href="/usuarios" class="btn btn-secondary">Volver a la lista de usuarios</a>
-</div>
+  <div class="text-right">
+    <a href="/usuarios" class="btn btn-secondary">Volver a la lista de usuarios</a>
+    <button type="submit" class="btn btn-primary">Crear</button>
+  </div>
 </form>
