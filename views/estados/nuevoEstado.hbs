@@ -1,0 +1,12 @@
+<h1 class="mb-4">Crear nuevo Estado</h1>
+<form action="/estados" method="POST" class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion" class="form-control" required>
+    <div class="invalid-feedback">
+      Por favor ingrese la descripción.
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Crear</button>
+  <a href="/estados" class="btn btn-secondary">Volver a la lista de estados</a>
+</form>
