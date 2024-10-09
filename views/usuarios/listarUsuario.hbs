@@ -1,0 +1,18 @@
+<h1 class="mb-4">Lista de Usuarios</h1>
+
+<ul class="list-group mb-4">
+  {{#each usuarios}}
+    <li class="list-group-item">
+      <strong>Usuario:</strong> {{this.usuario}} <br>
+      <strong>Correo:</strong> {{this.correo}} <br>
+      <strong>Rol:</strong> {{this.rol.descripcion}} <br>
+      <strong>Estado:</strong> {{this.estado.descripcion}} <br>
+      <a href="/usuarios/{{this.id}}" class="btn btn-sm btn-warning">Editar</a>
+      <form action="/usuarios/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
+        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
+
+<a href="/usuarios/nuevo" class="btn btn-success">Crear nuevo Usuario</a>
