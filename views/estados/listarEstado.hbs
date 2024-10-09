@@ -1,0 +1,15 @@
+<h1 class="mb-4">Lista de Estados</h1>
+
+<ul class="list-group mb-4">
+  {{#each estados}}
+    <li class="list-group-item">
+      <strong>Estado:</strong> {{this.descripcion}} <br>
+      <a href="/estados/{{this.id}}" class="btn btn-sm btn-warning">Editar</a>
+      <form action="/estados/{{this.id}}?_method=DELETE" method="POST" class="d-inline">
+        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
+
+<a href="/estados/nuevo" class="btn btn-success">Crear nuevo Estado</a>
