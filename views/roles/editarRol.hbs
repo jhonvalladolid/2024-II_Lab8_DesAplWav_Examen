@@ -1,4 +1,5 @@
-<h1 class="mb-4">Editar Rol</h1>
+<h1 class="mb-4 text-center">Editar Rol</h1>
+
 <form action="/roles/{{rol.id}}?_method=PUT" method="POST" class="needs-validation" novalidate>
   <div class="form-group">
     <label for="descripcion">Descripción:</label>
@@ -7,6 +8,9 @@
       Por favor ingrese la descripción.
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Actualizar</button>
-  <a href="/roles" class="btn btn-secondary">Volver a la lista de roles</a>
+
+<div class="text-right">
+    <a href="/roles" class="btn btn-secondary">Volver a la lista de roles</a>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+  </div>
 </form>
